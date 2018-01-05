@@ -22,37 +22,4 @@ public class SysUserController {
     private SysUserService sysUserService;
 
 
-    /**
-     * 新增用户
-     *
-     * @param sysUser
-     * @return
-     */
-    @RequestMapping(value = "/insert")
-    @ResponseBody
-    public String insertSysUser(@Valid SysUser sysUser, BindingResult result) {
-        if (result.hasErrors()){
-            for (ObjectError error : result.getAllErrors()) {
-                return error.getDefaultMessage();
-            }
-        }
-        sysUserService.insert(sysUser);
-
-        return "success";
-    }
-
-    @RequestMapping(value = "/page")
-    @ResponseBody
-    public List<SysUser> queryPage(){
-        return sysUserService.selectPage(new Page<>(1, 10)).getRecords();
-
-    }
-
-    @RequestMapping(value = "/transation")
-    @ResponseBody
-    public String testTransaion(){
-        sysUserService.addTwoSysUser();
-        return "success";
-    }
-
 }

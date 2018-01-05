@@ -71,7 +71,7 @@ CREATE TABLE `sys_role_resource` (
 DROP TABLE IF EXISTS `sys_user`;
 CREATE TABLE `sys_user` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键编号',
-  `account` varchar(32) DEFAULT NULL COMMENT '登录账号',
+  `user_name` varchar(32) DEFAULT NULL COMMENT '登录账号',
   `name` varchar(32) DEFAULT NULL COMMENT '用户名称',
   `password` varchar(32) DEFAULT NULL COMMENT '登录密码',
   `type` tinyint(4) DEFAULT NULL COMMENT '用户类型',
