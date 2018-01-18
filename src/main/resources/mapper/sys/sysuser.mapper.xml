@@ -2,12 +2,5 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.biubiu.domain.mapper.sys.SysUserMapper">
 
-    <select id="queryResourceByUserId" resultType="com.biubiu.domain.entity.sys.SysResource">
-        select distinct re.*
-            from sys_user u, sys_role r, sys_user_role ur, sys_role_resource rr, sys_resource re
-            where u.id = ur.user_id and r.id = ur.role_id
-            and r.id = rr.role_id and rr.resource_id = re.id
-            and u.enable =1 and r.enable = 1 and ur.enable = 1 and rr.enable = 1 and re.enable = 1
-    </select>
 
 </mapper>

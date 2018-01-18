@@ -8,11 +8,4 @@ import java.util.List;
 
 public interface SysUserService extends IService<SysUser> {
 
-    /**
-     * 查询用户资源
-     *
-     * @param userId
-     * @return
-     */
-    List<SysResource> queryResourceByUserId(Long userId);
 }

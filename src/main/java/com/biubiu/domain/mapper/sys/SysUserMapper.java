@@ -10,5 +10,4 @@ import java.util.List;
 public interface SysUserMapper extends BaseMapper<SysUser> {
 
 
-    List<SysResource> queryResourceByUserId(@Param("userId") Long userId);
 }

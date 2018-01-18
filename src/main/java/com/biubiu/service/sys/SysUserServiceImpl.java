@@ -12,11 +12,4 @@ import java.util.List;
 @Service
 public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser> implements SysUserService  {
 
-    @Autowired
-    private SysUserMapper sysUserMapper;
-
-    @Override
-    public List<SysResource> queryResourceByUserId(Long userId) {
-        return sysUserMapper.queryResourceByUserId(userId);
-    }
 }
