@@ -7,14 +7,14 @@ import com.biubiu.domain.entity.BaseEntity;
 import lombok.Data;
 
 /**
- * @author: tangjingxiang
+ * @author tangjingxiang
  * @date 20180118
- * @desc: 资源
+ * @desc 角色资源关联
  */
 
 @Data
-@TableName("sys_resource")
-public class SysResource extends BaseEntity {
+@TableName("sys_role_resource")
+public class SysRoleResource extends BaseEntity {
 
     /**
      * 编号
@@ -24,19 +24,14 @@ public class SysResource extends BaseEntity {
     private Long id;
 
     /**
-     * 资源名称
+     * 角色编号
      */
-    private String name;
+    private Long roleId;
 
     /**
-     * 资源类型
+     * 资源编号
      */
-    private Integer type;
-
-    /**
-     * 资源路径
-     */
-    private String action;
+    private Long resourceId;
 
 
 }

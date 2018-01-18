@@ -1,7 +1,9 @@
 package com.biubiu.domain.entity.sys;
 
 
+import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
+import com.baomidou.mybatisplus.enums.IdType;
 import com.biubiu.domain.entity.BaseEntity;
 import lombok.Data;
 import org.hibernate.validator.constraints.Email;
@@ -21,6 +23,8 @@ public class SysUser extends BaseEntity {
     /**
      * 编号
      */
+
+    @TableId(value="id", type= IdType.AUTO)
     private Long id;
 
     /**

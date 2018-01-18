@@ -6,15 +6,15 @@ import com.baomidou.mybatisplus.enums.IdType;
 import com.biubiu.domain.entity.BaseEntity;
 import lombok.Data;
 
-/**
- * @author: tangjingxiang
- * @date 20180118
- * @desc: 资源
- */
 
+/**
+ * @author tangjingxiang
+ * @date 20180118
+ * @desc 用户角色关联
+ */
 @Data
-@TableName("sys_resource")
-public class SysResource extends BaseEntity {
+@TableName("sys_user_role")
+public class SysUserRole extends BaseEntity {
 
     /**
      * 编号
@@ -24,19 +24,14 @@ public class SysResource extends BaseEntity {
     private Long id;
 
     /**
-     * 资源名称
+     * 用户编号
      */
-    private String name;
+    private Long userId;
 
     /**
-     * 资源类型
+     * 角色编号
      */
-    private Integer type;
-
-    /**
-     * 资源路径
-     */
-    private String action;
+    private Long roleId;
 
 
 }

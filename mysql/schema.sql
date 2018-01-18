@@ -1,23 +1,12 @@
-/*
-Navicat MySQL Data Transfer
 
-Source Server         : 127.0.0.1
-Source Server Version : 50719
-Source Host           : 127.0.0.1:3306
-Source Database       : db_anni
-
-Target Server Type    : MYSQL
-Target Server Version : 50719
-File Encoding         : 65001
-
-Date: 2017-12-07 19:33:01
-*/
+USE biubiu;
 
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
 -- Table structure for sys_resource
 -- ----------------------------
+
 DROP TABLE IF EXISTS `sys_resource`;
 CREATE TABLE `sys_resource` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键编号',
@@ -40,7 +29,8 @@ DROP TABLE IF EXISTS `sys_role`;
 CREATE TABLE `sys_role` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键编号',
   `name` varchar(32) DEFAULT NULL COMMENT '角色名称',
-  `remark` varchar(128) DEFAULT NULL COMMENT '备注',
+  `text` varchar(32) DEFAULT NULL COMMENT '角色文本',
+  `remark` varchar(128) DEFAULT NULL COMMENT '角色备注',
   `enable` tinyint(4) DEFAULT NULL COMMENT '可用状态',
   `create_time` datetime DEFAULT NULL COMMENT '创建时间',
   `create_by` bigint(20) DEFAULT NULL COMMENT '创建人',
@@ -104,3 +94,14 @@ CREATE TABLE `sys_user_role` (
   `update_by` bigint(20) DEFAULT NULL COMMENT '更新人',
   PRIMARY KEY (`id`)
 ) COMMENT='用户角色关联表';
+
+
+
+-- remember-me功能使用
+# CREATE TABLE `persistent_logins` (
+#   `username` varchar(64) NOT NULL,
+#   `series` varchar(64) NOT NULL,
+#   `token` varchar(64) NOT NULL,
+#   `last_used` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+#   PRIMARY KEY (`series`)
+# )

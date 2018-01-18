@@ -6,37 +6,35 @@ import com.baomidou.mybatisplus.enums.IdType;
 import com.biubiu.domain.entity.BaseEntity;
 import lombok.Data;
 
-/**
- * @author: tangjingxiang
- * @date 20180118
- * @desc: 资源
- */
 
+/**
+ * @author tangjingxiang
+ * @date 20181018
+ * @desc 角色
+ */
 @Data
-@TableName("sys_resource")
-public class SysResource extends BaseEntity {
+@TableName("sys_role")
+public class SysRole extends BaseEntity {
 
     /**
      * 编号
      */
 
-    @TableId(value="id", type= IdType.AUTO)
+    @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
     /**
-     * 资源名称
+     * 角色名称
      */
     private String name;
 
     /**
-     * 资源类型
+     * 角色文本
      */
-    private Integer type;
+    private String text;
 
     /**
-     * 资源路径
+     * 备注
      */
-    private String action;
-
-
+    private String remark;
 }

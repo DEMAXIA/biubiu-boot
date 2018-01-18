@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.biubiu.domain.mapper.sys.SysRoleMapper">
+
+
+    <select id="selectRolesByUserId" resultType="com.biubiu.domain.entity.sys.SysRole">
+        select sr.*
+        from sys_user_role sur
+        left join sys_role sr on sur.role_id = sr.id and sr.enable = 1
+        where sur.enable =1 and sur.user_id = #{userId}
+
+    </select>
+
+
+    <select id="selectRolesByResourceId" resultType="com.biubiu.domain.entity.sys.SysRole">
+        select sr.*
+        from sys_role_resource srr
+        left join sys_role sr on srr.role_id = sr.id and sr.enable =1
+        where srr.enable =1 and srr.resource_id = #{resourceId}
+
+    </select>
+
+</mapper>

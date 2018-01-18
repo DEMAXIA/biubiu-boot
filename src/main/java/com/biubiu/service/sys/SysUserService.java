@@ -1,4 +1,4 @@
-package com.biubiu.service;
+package com.biubiu.service.sys;
 
 import com.baomidou.mybatisplus.service.IService;
 import com.biubiu.domain.entity.sys.SysResource;
