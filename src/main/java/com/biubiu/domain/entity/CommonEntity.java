@@ -5,8 +5,14 @@ import lombok.Data;
 import java.util.Date;
 
 
+/**
+ * @author tangjingxiang
+ * @date 20180124
+ * @desc 公共实体字段
+ */
+
 @Data
-public class BaseEntity {
+public class CommonEntity {
 
     /**
      * 可用状态

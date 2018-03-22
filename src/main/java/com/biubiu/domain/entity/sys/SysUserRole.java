@@ -3,7 +3,7 @@ package com.biubiu.domain.entity.sys;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
-import com.biubiu.domain.entity.BaseEntity;
+import com.biubiu.domain.entity.CommonEntity;
 import lombok.Data;
 
 
@@ -14,7 +14,7 @@ import lombok.Data;
  */
 @Data
 @TableName("sys_user_role")
-public class SysUserRole extends BaseEntity {
+public class SysUserRole extends CommonEntity {
 
     /**
      * 编号

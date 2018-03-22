@@ -29,13 +29,13 @@ public class MyFilterSecurityInterceptor extends AbstractSecurityInterceptor imp
     @Autowired
     private MyAccessDecisionManager myAccessDecisionManager;
 
-    @Autowired
-    private AuthenticationManager authenticationManager;
+//    @Autowired
+//    private AuthenticationManager authenticationManager;
 
 
     @PostConstruct
     public void init(){
-        super.setAuthenticationManager(authenticationManager);
+//        super.setAuthenticationManager(authenticationManager);
         super.setAccessDecisionManager(myAccessDecisionManager);
     }
 

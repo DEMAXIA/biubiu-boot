@@ -4,12 +4,9 @@ package com.biubiu.domain.entity.sys;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
-import com.biubiu.domain.entity.BaseEntity;
+import com.biubiu.domain.entity.CommonEntity;
 import lombok.Data;
-import org.hibernate.validator.constraints.Email;
-import org.hibernate.validator.constraints.Length;
 
-import javax.validation.constraints.*;
 import java.util.Date;
 
 /**
@@ -18,7 +15,7 @@ import java.util.Date;
  */
 @Data
 @TableName(value = "sys_user")
-public class SysUser extends BaseEntity {
+public class SysUser extends CommonEntity {
 
     /**
      * 编号

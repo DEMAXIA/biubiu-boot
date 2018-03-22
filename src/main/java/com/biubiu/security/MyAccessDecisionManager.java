@@ -33,7 +33,6 @@ public class MyAccessDecisionManager implements AccessDecisionManager {
         ConfigAttribute ca;
         String needRole;
         Iterator<ConfigAttribute> iter = configAttributes.iterator();
-
         while (iter.hasNext()) {
             ca = iter.next();
             needRole = ca.getAttribute();
@@ -43,7 +42,6 @@ public class MyAccessDecisionManager implements AccessDecisionManager {
                 }
             }
         }
-
         throw new AccessDeniedException("权限不足！");
     }
 

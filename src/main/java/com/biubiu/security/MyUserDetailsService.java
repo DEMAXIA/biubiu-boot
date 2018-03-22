@@ -50,7 +50,7 @@ public class MyUserDetailsService implements UserDetailsService {
             }
             return new User(sysUser.getUserName(), sysUser.getPassword(), true, true, true, true, grantedAuthorities);
         } else {
-            throw new UsernameNotFoundException("用户： " + username + " 不存在!");
+            throw new UsernameNotFoundException("用户名或密码错误!");
 
         }
     }

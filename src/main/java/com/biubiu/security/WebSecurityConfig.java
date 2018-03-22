@@ -35,8 +35,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
      */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.addFilterBefore(mySecurityFilter, FilterSecurityInterceptor.class)
+        http
+                .addFilterBefore(mySecurityFilter, FilterSecurityInterceptor.class)
                 .authorizeRequests()
+                .antMatchers("/js/**","/css/**","/img/**","/images/**","/fonts/**","/**/favicon.ico","/hello/*").permitAll()
                 .anyRequest().authenticated()
                 .and().formLogin().loginPage("/login").failureUrl("/login?err").permitAll()
                 .successHandler(loginSuccessHandler())
